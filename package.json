@@ -4,6 +4,7 @@
     "description": "为vscode开发的快速打开hosts文件的扩展",
     "version": "0.0.1",
     "publisher": "bmqy",
+    "icon": "icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/bmqy/fast-hosts"
