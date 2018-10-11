@@ -2,7 +2,7 @@
     "name": "fast-hosts",
     "displayName": "fast-hosts",
     "description": "为vscode开发的快速打开hosts文件的扩展",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "bmqy",
     "icon": "icon.png",
     "repository": {
