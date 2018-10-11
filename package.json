@@ -1,0 +1,54 @@
+{
+    "name": "fast-hosts",
+    "displayName": "fast-hosts",
+    "description": "为vscode开发的快速打开hosts文件的扩展",
+    "version": "0.0.1",
+    "publisher": "bmqy",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bmqy/fast-hosts"
+    },
+    "author": {
+        "name": "bmqy",
+        "email": "qq88268459@126.com",
+        "url": "http://www.bmqy.net/"
+    },
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.fastHosts"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.fastHosts",
+                "title": "fast-hosts"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.fastHosts",
+                "key": "ctrl+shift+h",
+                "mac": "ctrl+shift+h"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
