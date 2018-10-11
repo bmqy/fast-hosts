@@ -16,18 +16,13 @@ function activate(context) {
         if (filePathHost === "" || !fs.statSync(filePathHost).isFile()) {
             return vscode.window.showErrorMessage("fastHosts: error, please contact developer");
         }
-        try {
-            //打开文件
-            vscode.workspace.openTextDocument(filePathHost).then(document => {
-                //显示文件
-                vscode.window.showTextDocument(document);
-            }, error => {
-                return vscode.window.showErrorMessage("fastHosts: " + error.message);
-            });
-        }
-        catch (error) {
-            return vscode.window.showErrorMessage(error.message);
-        }
+        //打开文件
+        vscode.workspace.openTextDocument(filePathHost).then(document => {
+            //显示文件
+            vscode.window.showTextDocument(document);
+        }, error => {
+            return vscode.window.showErrorMessage("fastHosts: " + error.message);
+        });
     });
     context.subscriptions.push(openHosts);
 }
